@@ -1,0 +1,21 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 1.6rem;
+}

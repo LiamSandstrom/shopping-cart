@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 
 function App() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper + " light-theme"}>
       <Navbar />
       <Outlet />
     </div>
