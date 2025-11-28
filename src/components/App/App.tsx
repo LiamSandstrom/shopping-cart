@@ -29,7 +29,7 @@ function App() {
         <>
           <Navbar inCart={inCart} />
           {navigation.state === "loading" ? <LoadBar /> : null}
-          <Outlet context={{ items, updateCart }} />
+          <Outlet context={{ items, updateCart, inCart }} />
         </>
       )}
     </div>

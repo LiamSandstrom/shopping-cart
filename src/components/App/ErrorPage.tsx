@@ -6,9 +6,9 @@ export default function ErrorPage() {
     <div className="flex-column-center gap-8 height-100">
       <Bug size={32} />
       <h1>Whoops! Something went wrong</h1>
-      <button>
+      <div className="errorLink">
         <Link to="/">Return Home</Link>
-      </button>
+      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import type { Item } from "../App/useItemLoader";
 import styles from "./Shop.module.css";
 import Card from "./Card";
 
-type OutletCtx = {
+export type OutletCtx = {
   items: Item[];
   updateCart: (id: number, amount: number) => void;
 };

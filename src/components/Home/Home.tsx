@@ -10,9 +10,9 @@ export default function Home() {
         reprehenderit doloribus quo ut. Quia, perferendis laborum.
         Necessitatibus similique mollitia nihil.
       </p>
-      <button>
+      <div className="errorLink">
         <Link to="/shop">Go Shop!</Link>
-      </button>
+      </div>
     </div>
   );
 }
