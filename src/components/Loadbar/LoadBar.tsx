@@ -1,5 +1,5 @@
 import styles from "./Loadbar.module.css";
 
-export default function LoadBar() {
+export function Loadbar() {
   return <div className={styles.loadbar}></div>;
 }
