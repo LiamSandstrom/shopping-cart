@@ -11,10 +11,16 @@ export default function Card({
 }) {
   const [amount, setAmount] = useState(1);
 
+  function updateAmount(val: number) {
+    const newVal = amount + val;
+    if (newVal < 0 || newVal > 99) return;
+    setAmount(newVal);
+  }
+
   function validateAmount(e: React.ChangeEvent<HTMLInputElement>) {
     const val = Number(e.target.value);
 
-    if (Number.isInteger(val) && val >= 0) {
+    if (Number.isInteger(val) && val >= 0 && val <= 99) {
       setAmount(val);
     }
   }
@@ -29,17 +35,11 @@ export default function Card({
         <p className={styles.price}>${item.price}</p>
         <div className="flex-row-center gap-16">
           <div className={styles.inputWrapper}>
-            <button
-              onClick={() => setAmount((prev) => prev - 1)}
-              className={styles.remove}
-            >
+            <button onClick={() => updateAmount(-1)} className={styles.remove}>
               -
             </button>
             <input value={amount} onChange={validateAmount} type="text" />
-            <button
-              onClick={() => setAmount((prev) => prev + 1)}
-              className={styles.add}
-            >
+            <button onClick={() => updateAmount(1)} className={styles.add}>
               +
             </button>
           </div>
