@@ -5,10 +5,12 @@
 .bubble {
   position: absolute;
   top: -8px;
-  right: -8px;
+  right: -10px;
   background-color: var(--focus-color);
-  width: 17px;
-  height: 17px;
+  min-width: 17px;
+  min-height: 17px;
+  font-size: 0.9rem;
+  aspect-ratio: 1/1;
 
   border-radius: 50%;
   display: flex;

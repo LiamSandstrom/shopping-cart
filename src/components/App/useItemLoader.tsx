@@ -8,9 +8,10 @@ export type Item = {
   description: string;
   category: string;
   image: string;
+  amount: number;
 };
 
-const minLoadTimeMs = 1500;
+const minLoadTimeMs = 0;
 
 export const useItemLoader = () => {
   const [items, setItems] = useState<Item[]>([]);
@@ -21,7 +22,7 @@ export const useItemLoader = () => {
     const fetchItems = async () => {
       const start = performance.now();
       try {
-        const res = await fetch("https://fakestoreapi.com/products?limit=10");
+        const res = await fetch("https://fakestoreapi.com/products?limit=12");
         if (!res.ok) throw new Error("Failed to fetch items");
         const data = await res.json();
         setItems(data);

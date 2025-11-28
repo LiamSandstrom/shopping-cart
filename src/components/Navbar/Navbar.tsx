@@ -3,11 +3,19 @@ import styles from "./Navbar.module.css";
 import ShopCart from "./ShopCart";
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import type { Item } from "../App/useItemLoader";
 
-export default function Navbar({ inCart = [] }: { inCart: Item[] }) {
+export default function Navbar({
+  inCart = new Map(),
+}: {
+  inCart: Map<number, number>;
+}) {
   const [lightTheme, setLightTheme] = useState(false);
   const root = useRef(document.documentElement);
+
+  let inCartAmount = 0;
+  for (const val of inCart.values()) {
+    inCartAmount += val;
+  }
 
   function FlipTheme() {
     setLightTheme((prev) => !prev);
@@ -35,7 +43,7 @@ export default function Navbar({ inCart = [] }: { inCart: Item[] }) {
             <Sun className="cursor" onClick={FlipTheme} size={20} />
           )}
           <Link to={"/cart"}>
-            <ShopCart inCart={inCart.length} size={20} />
+            <ShopCart inCart={inCartAmount} size={20} />
           </Link>
         </div>
       </div>

@@ -1,0 +1,97 @@
+img {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.imgWrapper {
+  width: 100%;
+  background-color: var(--text-lighter-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: var(--bg-secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.card:hover {
+  transition: tranform 0.15s;
+  transform: scale(1.03);
+  outline: 2px solid var(--text-color);
+}
+
+.lowerCard {
+  background-color: var(--bg-secondary-color);
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 180px;
+  gap: 8px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: var(--text-lighter-color);
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.add,
+.remove {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  width: 22px;
+  height: 22px;
+  border-radius: 30%;
+  font-size: 1.2rem;
+  padding: 0;
+  text-align: center;
+}
+
+.add:hover,
+.cartBtn:hover {
+  border-color: var(--success-color);
+}
+
+.remove:hover {
+  border-color: var(--focus-color);
+}
+
+.price {
+  margin-bottom: auto;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  font-weight: 800;
+}
+
+input {
+  width: 26px;
+  border: none;
+  border-radius: 10%;
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.cartBtn {
+  color: whitesmoke;
+}

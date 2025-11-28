@@ -10,7 +10,7 @@
 .wrapper div {
   width: 14px;
   height: 14px;
-  background-color: var(--focus-color);
+  background-color: var(--text-color);
 }
 
 .wrapper div:nth-of-type(1) {
@@ -24,14 +24,10 @@
   animation: load 0.8s infinite 0.4s ease;
 }
 
-.done.wrapper div:nth-of-type(1) {
-  animation: doneAnim1 0.8s forwards ease;
-}
-.done div:nth-of-type(2) {
-  animation: doneAnim2 0.8s forwards ease;
-}
+.done.wrapper div:nth-of-type(1),
+.done div:nth-of-type(2),
 .done div:nth-of-type(3) {
-  animation: doneAnim3 0.8s forwards ease;
+  animation: doneAnim1 0.4s forwards ease;
 }
 
 @keyframes load {
@@ -47,40 +43,9 @@
 
 @keyframes doneAnim1 {
   0% {
-  }
-  20% {
-    background-color: var(--success-color);
-    transform: translateY(0);
+    opacity: 100%;
   }
   100% {
-    transform: translateY(100vh);
-    background-color: var(--success-color);
-  }
-}
-
-@keyframes doneAnim2 {
-  0% {
-  }
-  40% {
-    background-color: var(--success-color);
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(100vh);
-    background-color: var(--success-color);
-  }
-}
-@keyframes doneAnim3 {
-  0% {
-  }
-  20% {
-    background-color: var(--success-color);
-  }
-  60% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(100vh);
-    background-color: var(--success-color);
+    opacity: 0;
   }
 }
