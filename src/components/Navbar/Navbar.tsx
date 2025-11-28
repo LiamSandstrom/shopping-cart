@@ -2,17 +2,19 @@ import { Link } from "react-router";
 import styles from "./Navbar.module.css";
 import ShopCart from "./ShopCart";
 import { Moon, Sun } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
-  const [darkTheme, setDarkTheme] = useState(true);
-  const root = useRef(document.body);
+  const [lightTheme, setLightTheme] = useState(false);
+  const root = useRef(document.documentElement);
 
   function FlipTheme() {
-    setDarkTheme((prev) => !prev);
-    if (darkTheme) root.current?.classList.add("dark-theme");
-    else root.current?.classList.remove("dark-theme");
+    setLightTheme((prev) => !prev);
   }
+
+  useEffect(() => {
+    root.current?.classList.toggle("light-theme", lightTheme);
+  }, [lightTheme]);
 
   return (
     <div className={styles.wrapper}>
@@ -26,7 +28,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex-row-center gap-8">
-          {darkTheme ? (
+          {lightTheme ? (
             <Moon className="cursor" onClick={FlipTheme} size={20} />
           ) : (
             <Sun className="cursor" onClick={FlipTheme} size={20} />

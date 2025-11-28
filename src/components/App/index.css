@@ -3,11 +3,11 @@
 }
 
 :root {
-  --bg-color: rgb(235, 235, 235);
-  --text-color: #121212;
-  --text-lighter-color: rgb(86, 83, 83);
+  --bg-color: #121212;
+  --text-color: rgb(245, 245, 245);
+  --text-lighter-color: rgb(215, 215, 215);
   --secondary-color: orange;
-  --focus-color: rgb(198, 96, 96);
+  --focus-color: rgb(192, 100, 100);
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -20,12 +20,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.dark-theme {
-  --bg-color: #121212;
-  --text-color: rgb(245, 245, 245);
-  --text-lighter-color: rgb(225, 225, 225);
+.light-theme {
+  --bg-color: rgb(235, 235, 235);
+  --text-color: #121212;
+  --text-lighter-color: rgb(86, 83, 83);
   --secondary-color: orange;
-  --focus-color: rgb(192, 100, 100);
+  --focus-color: rgb(198, 96, 96);
 }
 
 #root {
@@ -48,10 +48,9 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
   color: var(--text-lighter-color);
   background-color: var(--bg-color);
-  transition: color 1s, background-color 1s;
 }
 
 h1 {
@@ -99,10 +98,6 @@ button:focus-visible {
 
 .cursor {
   cursor: pointer;
-}
-
-.cursor:hover {
-  color: var(--text-color);
 }
 
 h1,

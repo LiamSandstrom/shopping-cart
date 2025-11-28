@@ -9,7 +9,13 @@ export const routes = [
     element: <App />,
     children: [
       { index: true, element: <Home /> },
-      { path: "shop", element: <Shop /> },
+      {
+        path: "shop",
+        element: <Shop />,
+        loader: async () => {
+          await new Promise((r) => setTimeout(r, 1000));
+        },
+      },
       { path: "cart", element: <Cart /> },
     ],
   },
