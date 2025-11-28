@@ -4,10 +4,12 @@
 
 :root {
   --bg-color: #121212;
+  --bg-secondary-color: rgb(10, 10, 10);
   --text-color: rgb(245, 245, 245);
   --text-lighter-color: rgb(215, 215, 215);
   --secondary-color: orange;
   --focus-color: rgb(192, 100, 100);
+  --success-color: rgb(136, 202, 136);
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -22,6 +24,7 @@
 
 .light-theme {
   --bg-color: rgb(235, 235, 235);
+  --bg-secondary-color: rgb(245, 245, 245);
   --text-color: #121212;
   --text-lighter-color: rgb(86, 83, 83);
   --secondary-color: orange;
@@ -50,7 +53,6 @@ body {
   min-width: 320px;
   height: 100vh;
   color: var(--text-lighter-color);
-  background-color: var(--bg-color);
 }
 
 h1 {
@@ -87,6 +89,7 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .gap-8 {
@@ -94,6 +97,10 @@ button:focus-visible {
 }
 .gap-16 {
   gap: 16px;
+}
+
+.height-100 {
+  height: 100%;
 }
 
 .cursor {

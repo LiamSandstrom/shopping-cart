@@ -1,8 +1,10 @@
 .wrapper {
   width: 100%;
-  padding: 16px 24px;
+  padding: 14px;
   display: flex;
   justify-content: center;
+  background-color: var(--bg-secondary-color);
+  transition: background-color 1s;
 }
 
 .navbar {
